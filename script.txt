@@ -1,0 +1,11 @@
+		if TeamA.ObjectIdsLookup[BallCarrierId] then
+			if UnitHasSkill(GetCharacterTableByObjectId(GetActiveUnitId({PlayerIndex = 1})), "PyrePreDamageSkill") then
+				Teleport({ Id = GetActiveUnitId({PlayerIndex = 1}), DestinationId = TeamB.PyreId })
+			end
+		
+		end
+		if TeamB.ObjectIdsLookup[BallCarrierId] then
+			if UnitHasSkill(GetCharacterTableByObjectId(GetActiveUnitId({PlayerIndex = 2})), "PyrePreDamageSkill") then
+				Teleport({ Id = GetActiveUnitId({PlayerIndex = 2}), DestinationId = TeamA.PyreId })
+			end
+		end
